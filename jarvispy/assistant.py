@@ -5,14 +5,15 @@ import google.generativeai as genai
 import contextlib
 
 
-def download_nltk_data():
-    print("Downloading NLTK data... This may take a moment.")
+
+def setup_assistant():
+    """Run this function only during the setup phase to download required NLTK data."""
+    print("Setting up Jarvis Assistant... Downloading NLTK data...")
     with contextlib.redirect_stdout(open(os.devnull, "w")):
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
+    print("Setup complete! NLTK data has been downloaded.")
 
-
-download_nltk_data()
 
 
 def load_api_key():
@@ -112,8 +113,22 @@ def wakeup_assistant():
 
 
 def handle_input(model, user_input):
+    tokens = nltk.word_tokenize(user_input)
+    tagged = nltk.pos_tag(tokens)
+
+    # Construct a more informative prompt based on token analysis
+    nouns = [word for word, pos in tagged if pos.startswith('NN')]
+    verbs = [word for word, pos in tagged if pos.startswith('VB')]
+
+    # Create a context-aware prompt
+    prompt = f"User input: {user_input}. "
+    if nouns:
+        prompt += f"The main topics are: {', '.join(nouns)}. "
+    if verbs:
+        prompt += f"The key actions are: {', '.join(verbs)}. "
+
     if is_question(user_input):
-        candidates, best_response = query_gemini_api(model, user_input)
+        candidates, best_response = query_gemini_api(model, prompt)
         if candidates:
             current_index = 0
             print(f"Jarvis: {best_response}")

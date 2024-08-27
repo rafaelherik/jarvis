@@ -81,6 +81,34 @@ Firt you must configure the Gemini API_KEY to use:
 jarvis-setup
 ```
 
+Then it will download the nltk_data and asks for the API_KEY:
+
+```bash copy
+
+Downloading NLTK data... This may take a moment.
+[nltk_data] Downloading package punkt to /Users/jarvispy/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /Users/jarvispy/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+Please enter your Google Gemini API_KEY:
+
+```
+
+After you enter the API it will show:
+
+```bash copy
+API Key saved to /Users/jarvispy/.jarvispy/config.txt
+```
+
+After the setup is complete you can run the assistant:
+
+```bash copy
+
+
+```
+
 
 ## Technologies Used
 
