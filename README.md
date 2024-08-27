@@ -9,11 +9,75 @@ Welcome to the Jarvis Assistant project! This is a basic implementation of a con
 - Powered by Google Gemini: This assistant is powered by Google Gemini, Google's generative AI technology, enabling advanced content generation.
 
 
-## Installation
-TO DO
+## Installation 
+
+### Using PyPi
+The package is not available yet
+
+### Cloning the repo
+
+#### Step 1: Clone the Repository
+First, you'll need to clone the repository from GitHub to your local machine.
+
+```bash copy
+git clone https://github.com/rafaelherik/jarvis.git
+cd jarvis
+```
+
+#### Step 2: Install the Required Build Tools
+Before building the package, ensure you have the necessary tools installed. You’ll need setuptools and wheel, which are commonly used to build Python packages.
+
+```bash copy
+pip install setuptools wheel
+```
+
+#### Step 3: Build the Package
+Once you are inside the cloned repository directory, you can build the package using the following command:
+
+```bash copy
+python setup.py sdist bdist_wheel
+```
+
+This command will generate distribution files (both source distribution and wheel) in the dist/ directory.
+
+* **sdist** creates a source distribution (a .tar.gz file).
+* **bdist_wheel** creates a wheel distribution (a .whl file).
+
+
+#### Step 4: Install the Package Locally
+Now that you have built the package, you can install it locally using pip:
+
+- Installing from the Source Distribution (.tar.gz):
+
+```bash copy
+pip install dist/jarvispy-0.1.0.tar.gz
+```
+
+- Installing from the Wheel Distribution (.whl):
+
+```bash copy
+pip install dist/jarvispy-0.1.0-py3-none-any.whl
+```
+
+This will install the package and make it available in your Python environment.
+
+#### Step 5: Verify Installation
+You can verify that the package is installed correctly by running:
+
+```bash copy
+pip show jarvispy
+```
+
+This will display details about the installed package, confirming that it has been installed in your environment.
+
 
 ## Running the Assistant
-TO DO
+
+Firt you must configure the Gemini API_KEY to use:
+
+```bash copy
+jarvis-setup
+```
 
 
 ## Technologies Used

@@ -23,7 +23,7 @@ def setup_api_key():
 
 
 setup(
-    name='jarvis_assistant',
+    name='jarvispy',
     version='0.0.1',
     packages=find_packages(),
     install_requires=[
@@ -32,12 +32,12 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'jarvis=jarvis_ai_assistant.main:start',  # Define the CLI command
-            'jarvis-setup=jarvis_ai_assistant.main:setup',  # Command to update the API key
+            'jarvis=jarvispy.main:start',  # Define the CLI command
+            'jarvis-setup=jarvispy.main:setup',  # Command to update the API key
         ],
     },
     author='Rafael Herik de Carvalho',
     author_email='rafaelherik@gmail.com',
-    description='A personal jarvis_assistant powered by AI',
+    description='A personal jarvispy powered by AI',
     python_requires='>=3.9',
 )
