@@ -103,7 +103,6 @@ def wakeup_assistant():
         print(f"Jarvis: {response}")
 
 
-
 def handle_input(model, user_input):
     if is_question(user_input):
         candidates, best_response = query_gemini_api(model, user_input)
@@ -128,4 +127,3 @@ def handle_input(model, user_input):
         return "Goodbye!"
     else:
         return "I'm here to assist! How can I help you?"
-

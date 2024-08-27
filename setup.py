@@ -12,8 +12,7 @@ def setup_api_key():
     # Prompt the user for the API Key
     api_key = input("Please enter your Google Gemini API_KEY (See how to get the key on https://ai.google.dev/gemini-api): ")
 
-
-    if(api_key is not None and api_key != ""):
+    if api_key is not None and api_key != "":
         # Save the API Key to a config file
         with open(config_file, "w") as f:
             f.write(f"API_KEY={api_key}\n")
@@ -25,7 +24,7 @@ def setup_api_key():
 
 setup(
     name='jarvis_assistant',
-    version='0.1',
+    version='0.0.1',
     packages=find_packages(),
     install_requires=[
         'nltk',
