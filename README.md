@@ -8,6 +8,8 @@ Welcome to the Jarvis Assistant project! This is a basic implementation of a con
 - Natural Language Processing: Utilizes the NLTK (Natural Language Toolkit) library for tokenization and part-of-speech tagging.
 - Powered by Google Gemini: This assistant is powered by Google Gemini, Google's generative AI technology, enabling advanced content generation.
 
+## Requirements
+ - Python 3.9+: The Jarvis Assistant requires Python version 3.9 or higher to function properly.
 
 ## Installation 
 

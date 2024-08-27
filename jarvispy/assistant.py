@@ -2,9 +2,17 @@ import os
 from datetime import datetime
 import nltk
 import google.generativeai as genai
+import contextlib
 
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
+
+def download_nltk_data():
+    print("Downloading NLTK data... This may take a moment.")
+    with contextlib.redirect_stdout(open(os.devnull, "w")):
+        nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
+
+
+download_nltk_data()
 
 
 def load_api_key():
