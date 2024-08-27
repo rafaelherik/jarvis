@@ -1,2 +1,7 @@
 # jarvis
-Jarvis AI assistant using Python
+
+This repository implements an personal assistant using python.
+
+
+
+### Components
