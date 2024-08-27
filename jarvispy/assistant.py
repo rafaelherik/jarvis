@@ -5,16 +5,17 @@ import google.generativeai as genai
 import contextlib
 
 
-
 def setup_assistant():
     """Run this function only during the setup phase to download required NLTK data."""
     print("Setting up Jarvis Assistant... Downloading NLTK data...")
     with contextlib.redirect_stdout(open(os.devnull, "w")):
         nltk.download('punkt', quiet=True)
         nltk.download('averaged_perceptron_tagger', quiet=True)
-    print("Setup complete! NLTK data has been downloaded.")
+        nltk.download('averaged_perceptron_tagger_eng', quiet=True)
+   
 
 setup_assistant()
+
 
 def load_api_key():
     config_dir = os.path.join(os.path.expanduser("~"), ".jarvispy")
