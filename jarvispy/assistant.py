@@ -10,11 +10,11 @@ def setup_assistant():
     """Run this function only during the setup phase to download required NLTK data."""
     print("Setting up Jarvis Assistant... Downloading NLTK data...")
     with contextlib.redirect_stdout(open(os.devnull, "w")):
-        nltk.download('punkt')
-        nltk.download('averaged_perceptron_tagger')
+        nltk.download('punkt', quiet=True)
+        nltk.download('averaged_perceptron_tagger', quiet=True)
     print("Setup complete! NLTK data has been downloaded.")
 
-
+setup_assistant()
 
 def load_api_key():
     config_dir = os.path.join(os.path.expanduser("~"), ".jarvispy")

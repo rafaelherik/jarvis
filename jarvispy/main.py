@@ -1,4 +1,4 @@
-from jarvispy.assistant import wakeup_assistant, setup_assistant
+from jarvispy.assistant import wakeup_assistant
 import os
 
 def start():
@@ -10,14 +10,8 @@ def setup():
 def setup_api_key():
     config_dir = os.path.join(os.path.expanduser("~"), ".jarvispy")
     config_file = os.path.join(config_dir, "config.txt")
-    setup_assistant()
-    # Create the directory if it doesn't exist
-    os.makedirs(config_dir, exist_ok=True)
-
-    # Prompt the user for the API Key
-    api_key = input("Please enter your Google Gemini API_KEY: ")
-
-    # Save the API Key to a config file
+    os.makedirs(config_dir, exist_ok=True)    
+    api_key = input("Please enter your Google Gemini API_KEY: ")    
     with open(config_file, "w") as f:
         f.write(f"API_KEY={api_key}\n")
 
