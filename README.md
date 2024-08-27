@@ -10,6 +10,7 @@ Welcome to the Jarvis Assistant project! This is a basic implementation of a con
 
 ## Requirements
  - Python 3.9+: The Jarvis Assistant requires Python version 3.9 or higher to function properly.
+ - Gemini API Key - [Generate Here](https://ai.google.dev/gemini-api)
 
 ## Installation 
 
@@ -86,12 +87,6 @@ Then it will download the nltk_data and asks for the API_KEY:
 ```bash copy
 
 Downloading NLTK data... This may take a moment.
-[nltk_data] Downloading package punkt to /Users/jarvispy/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-[nltk_data] Downloading package averaged_perceptron_tagger to
-[nltk_data]     /Users/jarvispy/nltk_data...
-[nltk_data]   Package averaged_perceptron_tagger is already up-to-
-[nltk_data]       date!
 Please enter your Google Gemini API_KEY:
 
 ```
@@ -105,7 +100,25 @@ API Key saved to /Users/jarvispy/.jarvispy/config.txt
 After the setup is complete you can run the assistant:
 
 ```bash copy
+jarvis
+```
 
+Then the prompt will wait for your input:
+
+```bash copy
+
+Setting up Jarvis Assistant... Downloading NLTK data...
+
+Good Afternoon!
+
+Welcome! I'm your jarvis assistant. Here’s how you can interact with me:
+1. You can ask me questions (e.g., 'What is the weather today?').
+2. You can give me commands (e.g., 'Add project context').
+3. If you want to exit, simply type 'exit' or 'quit'.
+
+How can I assist you today?
+
+You: _
 
 ```
 
