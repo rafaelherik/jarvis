@@ -8,7 +8,7 @@ nltk.download('averaged_perceptron_tagger')
 
 
 def load_api_key():
-    config_dir = os.path.join(os.path.expanduser("~"), ".jarvis_assistant")
+    config_dir = os.path.join(os.path.expanduser("~"), ".jarvispy")
     config_file = os.path.join(config_dir, "config.txt")
 
     if os.path.exists(config_file):

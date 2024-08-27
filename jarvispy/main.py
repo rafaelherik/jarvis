@@ -1,4 +1,4 @@
-from jarvis_assistant.assistant import wakeup_assistant
+from jarvispy.assistant import wakeup_assistant
 import os
 
 def start():
@@ -8,7 +8,7 @@ def setup():
     setup_api_key()
 
 def setup_api_key():
-    config_dir = os.path.join(os.path.expanduser("~"), ".jarvis_assistant")
+    config_dir = os.path.join(os.path.expanduser("~"), ".jarvispy")
     config_file = os.path.join(config_dir, "config.txt")
 
     # Create the directory if it doesn't exist
