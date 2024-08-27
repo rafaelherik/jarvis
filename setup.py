@@ -32,8 +32,8 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'jarvis=jarvis_assistant.main:start',  # Define the CLI command
-            'jarvis-setup=jarvis_assistant.main:setup',  # Command to update the API key
+            'jarvis=jarvis_ai_assistant.main:start',  # Define the CLI command
+            'jarvis-setup=jarvis_ai_assistant.main:setup',  # Command to update the API key
         ],
     },
     author='Rafael Herik de Carvalho',
