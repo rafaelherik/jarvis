@@ -1,4 +1,4 @@
-#Jarvis Assistant
+# Jarvis Assistant
 
 Welcome to the Jarvis Assistant project! This is a basic implementation of a conversational assistant that leverages the power of generative AI to interact with users, answer questions, and perform basic actions. As this project evolves, it will continue to receive new functionalities and improvements.
 
@@ -32,4 +32,4 @@ Google Gemini is a generative AI model developed by Google, known for its advanc
 As this project is under active development, contributions are welcome! Feel free to fork the repository, submit pull requests, or suggest new features by opening an issue.
 
 ### License
-This project is licensed under the GNU Public License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the LICENSE file for more details.
